@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Link</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background: linear-gradient(to bottom right, #ffe4e1, #ffb6c1); /* Cute pastel gradient */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+                transition: background 0.3s ease, color 0.3s ease;
+            }
+            body.night-mode {
+                background: linear-gradient(to bottom right, #1e272e, #485460); /* Dark gradient */
+                color: white;
+            }
+            .navigation-bar {
+                background-color: #ffb6c1; /* Light pink */
+                color: white;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: background-color 0.3s ease;
+            }
+            body.night-mode .navigation-bar {
+                background-color: #2f3640; /* Darker header for night mode */
+            }
+            .nav-items {
+                display: flex;
+            }
+            .nav-items li {
+                list-style: none;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+            .nav-items li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .nav-items li a:hover {
+                color: #ff69b4; /* Hot pink on hover */
+                text-decoration: underline;
+            }
+            h3 {
+                font-size: 24px;
+                color: #ff69b4; /* Hot pink */
+            }
+            body.night-mode h3 {
+                color: #ffb6c1; /* Light pink in dark mode */
+            }
+            .iframe-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                margin-top: 30px; /* Adds space between the headline and content */
+            }
+            .yt-link {
+                display: inline-block;
+                padding: 12px 25px;
+                background-color: #ff69b4; /* Hot pink */
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+                border-radius: 30px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: all 0.3s ease;
+                font-size: 18px;
+            }
+            .yt-link:hover {
+                background-color: #ff1493; /* Darker pink on hover */
+                transform: scale(1.1);
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+            }
+            body.night-mode .yt-link {
+                background-color: #34495e; /* Dark mode button */
+                color: white;
+            }
+            /* Day/Night Mode Toggle */
+            .toggle-container {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+            .toggle-label {
+                font-size: 14px;
+                margin-right: 10px;
+                color: #ff69b4;
+                font-weight: bold;
+                transition: color 0.3s ease;
+            }
+            body.night-mode .toggle-label {
+                color: #ffb6c1;
+            }
+            .toggle-switch {
+                width: 50px;
+                height: 25px;
+                background-color: #ff69b4;
+                border-radius: 25px;
+                position: relative;
+                transition: background-color 0.3s ease;
+            }
+            body.night-mode .toggle-switch {
+                background-color: #34495e;
+            }
+            .toggle-circle {
+                width: 20px;
+                height: 20px;
+                background-color: white;
+                border-radius: 50%;
+                position: absolute;
+                top: 2.5px;
+                left: 5px;
+                transition: all 0.3s ease;
+            }
+            body.night-mode .toggle-circle {
+                left: 25px;
+                background-color: #ff69b4;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="toggle-container" onclick="toggleDayNight()">
+            <span class="toggle-label">Day/Night</span>
+            <div class="toggle-switch">
+                <div class="toggle-circle"></div>
+            </div>
+        </div>
+        <nav class="navigation-bar">
+            <h3>Treasure</h3>
+            <ul class="nav-items">
+                <li><a href="http://127.0.0.1:5500/WEBSITE.html/about.html">About</a></li>
+                <li><a href="http://127.0.0.1:5500/WEBSITE.html/service.html">Services</a></li>
+                <li><a href="http://127.0.0.1:5500/WEBSITE.html/loginpage..html">Login</a></li>
+                <li><a href="http://127.0.0.1:5500/WEBSITE.html/signin.html">Signup</a></li>
+            </ul>
+        </nav>
+        <div class="iframe-container">
+            <!-- Updated YT link -->
+            <a href="https://www.youtube.com/watch?v=9bZkp7q19f0" target="_blank" class="yt-link">
+                Watch on YouTube
+            </a>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29055.336089783814!2d74.2424576!3d16.728064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1008d2532b153%3A0xa154d05f5c9250ae!2sD.%20Y.%20Patil%20College%20Of%20Engineering%20%26%20Technology!5e1!3m2!1sen!2sin!4v1743234047277!5m2!1sen!2sin" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <script>
+            function toggleDayNight() {
+                document.body.classList.toggle('night-mode');
+            }
+        </script>
+    </body>
+</html>

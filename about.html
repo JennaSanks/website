@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>About</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                background: linear-gradient(to bottom right, #ffe4e1, #ffb6c1); /* Cute pastel gradient */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+            }
+            .navigation-bar {
+                background-color: #ffb6c1; /* Light pink */
+                color: white;
+                padding: 15px;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+            .nav-items {
+                display: flex;
+            }
+            .nav-items li {
+                list-style: none;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+            .nav-items li a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+            .nav-items li a:hover {
+                color: #ff69b4; /* Hot pink on hover */
+                text-decoration: underline;
+            }
+            h3 {
+                font-size: 24px;
+                color: #ff69b4; /* Hot pink */
+            }
+            .about-container {
+                text-align: center;
+                margin-top: 30px;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 20px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                max-width: 600px;
+            }
+            .about-container h1 {
+                font-size: 28px;
+                color: #ff69b4; /* Hot pink */
+                margin-bottom: 15px;
+            }
+            .about-container p {
+                font-size: 18px;
+                color: #333;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navigation-bar">
+            <h3>Treasure</h3>
+            <ul class="nav-items">
+                <li><a href="http://127.0.0.1:5500/WEBSITE.html/about.html">About</a></li>
+                <li><a href="http://127.0.0.1:5500/WEBSITE.html/service.html">Services</a></li>
+                <li><a href="http://127.0.0.1:5500/WEBSITE.html/loginpage..html">Login</a></li>
+                <li><a href="http://127.0.0.1:5500/WEBSITE.html/signin.htmll">Signup</a></li>
+            </ul>
+        </nav>
+        <div class="about-container">
+            <h1>About Us</h1>
+            <p>
+                Welcome to Treasure! It's made by Sanskruti a AIML student at DYPCET, Kolhapur.
+            </p>
+        </div>
+    </body>
+</html>
